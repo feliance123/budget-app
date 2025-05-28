@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monthly Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Monthly Expense Tracker</h1>
+
+    <form id="budgetForm">
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button type="submit">Add Entry</button>
+    </form>
+
+    <div class="totals">
+      <p><strong>Total Income:</strong> R <span id="totalIncome">0</span></p>
+      <p><strong>Total Expenses:</strong> R <span id="totalExpenses">0</span></p>
+      <p><strong>Balance:</strong> R <span id="balance">0</span></p>
+    </div>
+
+    <table>
+      <thead>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Action</th> <!-- New column -->
+          </tr>
+        </thead>
+        
+      </thead>
+      <tbody id="entryTable">
+        <!-- Budget entries will appear here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
